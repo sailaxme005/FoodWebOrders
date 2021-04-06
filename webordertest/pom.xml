@@ -5,7 +5,7 @@
 	<groupId>weborders</groupId>
 	<artifactId>webordertest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	
 	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 	<dependencies>
 		<dependency>

@@ -25,46 +25,49 @@ public class OrderTypePageTest extends BaseClass  {
 		scr = new ScreenShots();
 		menuweb = new MenuWeb();
 	}
-@Test(priority = 1,groups = {"sanity","colNoPro"})
-  public void Verify_clickOnCollections() {
-	ordertype.clickOnCollections();
-	System.out.println("Verify_clickOnCollection executed..");
-	
-  }
-@Test(priority = 1, groups = {"delNoPro"})
+//@Test(priority = 1)
+//  public void Verify_clickOnCollections() {
+//	ordertype.clickOnCollections();
+//	System.out.println("Verify_clickOnCollection executed..");
+//	
+//  }
+@Test(priority = 1)
 public void verifty_clickOnDelivery() {
 	ordertype.clickOnDelivery();
 	ordertype.enterPostCode(prop.getProperty("Postcode"));
 }
 
-@Test(priority = 2,groups = {"colNoPro","delNoPro"})
-public void radioButton_selectNo() {
-	 ordertype.selectNo();
-	 System.out.println("radioButton_selectNo executed..");
-}
+//@Test(priority = 2)
+//public void radioButton_selectNo() {
+//	 ordertype.selectNo();
+//	 System.out.println("radioButton_selectNo executed..");
+//}
 @Test(priority = 2)
-public boolean radioButton_selectYes() {
-	return ordertype.selectYes();
+public void radioButton_selectYes() {
+	 ordertype.selectYes();
 }
-
-@Test(priority = 3, groups = {"colNoPro","delNoPro"})
-public void verify_Proceed() throws IOException, InterruptedException{ 
-	
-		menuweb = ordertype.clickOnProceed();
-		 System.out.println("verify_Proceed executed..");
-		
-	}
-@Test(priority = 3,groups = {"2"})
-	public void Verify_Browse() {
-		ordertype.clickOnBrowse();
-		
-	}
-  @BeforeClass(groups = {"delNoPro","colNoPro"})
+@Test(priority = 3)
+public void verify_clickOnCalender() {
+	ordertype.clickOnCalender();
+}
+//@Test(priority = 4)
+//public void verify_Proceed() throws IOException, InterruptedException{ 
+//	
+//		menuweb = ordertype.clickOnProceed();
+//		 System.out.println("verify_Proceed executed..");
+//		
+//	}
+//@Test(priority = 3)
+//	public void Verify_Browse() {
+//		ordertype.clickOnBrowse();
+//		
+//	}
+  @BeforeClass()
   public void beforeClass() {
 	  initlization();
 	  System.out.println("Browser Opened..");
   }
-  @AfterMethod(groups = {"delNoPro","colNoPro"})
+  @AfterMethod()
 	public void screenshots_failedtcs(ITestResult result) {
 		scr.screenshots_failedtcs(result);
 	
